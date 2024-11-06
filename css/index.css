@@ -1,0 +1,243 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #FFF;
+    font-family: Inter;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 2px solid #eee;
+}
+
+.logo {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+}
+
+.select-menu {
+    padding: 16px 30px;
+    letter-spacing: 0.5px;
+    color: #99A0AE;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.menu-tabs {
+    display: flex;
+    color: #525866;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.menu-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.menu-tabs i {
+    font-size: 1.2rem;
+}
+
+.tab {
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 12px;
+    flex-shrink: 0; /* Prevent tabs from shrinking */
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: #049CCC;
+    border-bottom: 2px solid #049CCC;
+}
+/* Optional: Add hover effect */
+.tab:hover:not(.active) {
+    color: #049CCC;
+    opacity: 0.7;
+}
+
+.card {
+    border-radius: 16px;
+    margin: 1rem;
+    border: 1px solid #E1E4EA;
+    background: #FFF;
+    box-shadow: 0px 1px 2px 0px rgba(10, 13, 20, 0.03);
+}
+
+.card-header {
+    padding: 1rem;
+    font-size: 16px;
+    font-weight: 500;
+    background: #F5F7FA;
+    border-radius: 16px 16px 0 0;
+    color: #0E121B;
+    font-feature-settings: 'ss11' on, 'cv09' on, 'liga' off, 'calt' off;
+    line-height: 24px;
+    letter-spacing: -0.176px;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.info-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.info-item.full-width {
+    margin-bottom: 1rem;
+}
+
+.info-item {
+    flex: 1;
+}
+
+.info-label {
+    font-size: 12px;
+    margin-bottom: 0.25rem;
+    color: #525866;
+    font-feature-settings: 'ss11' on, 'cv09' on, 'liga' off, 'calt' off;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+}
+
+.info-value {
+    color: #0E121B;
+    font-size: 14px;
+    font-weight: 400;
+    font-feature-settings: 'ss11' on, 'cv09' on, 'liga' off, 'calt' off;
+    line-height: 20px;
+    letter-spacing: -0.084px;
+}
+
+/* History Card */
+
+.history-item {
+    padding: 16px 0;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.assessment-text {
+    color: #525866;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    line-height: 20px;
+}
+
+.risk-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 100px;
+    margin: 0 4px;
+    font-weight: 500;
+}
+
+.risk-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.risk-badge.low {
+    background: rgba(20, 146, 112, 0.08);
+    color: #149270;
+    border: 1px solid rgba(20, 146, 112, 0.32);
+}
+
+.risk-badge.low .dot {
+    background: #149270;
+}
+
+.risk-badge.high {
+    background: rgba(239, 68, 68, 0.08);
+    color: #EF4444;
+    border: 1px solid rgba(239, 68, 68, 0.32);
+}
+
+.risk-badge.high .dot {
+    background: #EF4444;
+}
+
+.risk-badge.medium {
+    background: rgba(245, 158, 11, 0.08);
+    color: #F59E0B;
+    border: 1px solid rgba(245, 158, 11, 0.32);
+}
+
+.risk-badge.medium .dot {
+    background: #F59E0B;
+}
+
+.status-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 14px;
+    gap: 4px;
+}
+
+.status-badge.passed, .status-badge.na, .status-badge.failed {
+    border: 1px solid rgba(20, 146, 112, 0.32);
+    border-radius: var(--radius-6, 6px);
+border: 1px solid #E1E4EA;
+background: #FFF;
+color: #525866;
+}
+
+.date {
+    color: #525866;
+    font-size: 14px;
+}
+
+.status-badge i {
+    font-size: 16px;
+}
